@@ -23,8 +23,6 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 - **Functional transforms:** custom aggregation functions (`coefV` coefficient of variation), `lambda`, `map`, and `groupby().agg()` on retail/customer SQLite data (`xyz.db`)
 - **Geospatial visualization:** folium heatmaps of failed Chicago food inspections tied to NoSQL query results
 
-**Out of scope for this repo:** cloud ETL orchestration and batch/streaming pipeline frameworks (see **Data-Miners**); systems lifecycle and architecture methodology (see **Systems-Engineering**); deployed analytics application engineering (see **Analytics-Applications-Engineering**).
-
 ---
 
 ## 3. Stack
