@@ -1,6 +1,16 @@
 # Data setup
 
-Large raw files and SQLite databases are **not** committed to this repository. Rebuild them locally using the notebooks, SQL scripts, or public sources below.
+Large raw files and most SQLite databases are **not** committed. One small teaching database is included for immediate SQL practice.
+
+## Committed sample: SaleCo (`data/sample/SalesCO.db`, ~52 KB)
+
+Prebuilt SQLite database for the SaleCo vendor/product/customer schema used in BI SQL coursework. Tables: `VENDOR`, `PRODUCT`, `CUSTOMER`, `INVOICE`, `LINE`.
+
+```bash
+sqlite3 data/sample/SalesCO.db "SELECT COUNT(*) FROM PRODUCT;"
+```
+
+Rebuild from scratch: `sql/rdb/build-saleco-schema.sql`, `load-saleco-data.sql`, `sample-queries.sql`.
 
 ## LA traffic collisions (Module 4 — `SQL LA Traffic Data.ipynb`)
 
@@ -10,13 +20,7 @@ Large raw files and SQLite databases are **not** committed to this repository. R
 | `LAtraffic.db` | ~113 MB | Created in the notebook via SQLAlchemy `to_sql` after loading CSVs |
 | `MO master.csv`, `MO per accident.csv` | small | Derived/split in coursework from the traffic dataset |
 
-**SQL scripts:** `sql/rdb/build-saleco-schema.sql`, `load-saleco-data.sql`, and `sample-queries.sql` build the separate SaleCo teaching schema (`SalesCO.db`, ~52 KB) used for BI query practice.
-
-```bash
-sqlite3 SalesCO.db < sql/rdb/build-saleco-schema.sql
-sqlite3 SalesCO.db < sql/rdb/load-saleco-data.sql
-sqlite3 SalesCO.db < sql/rdb/sample-queries.sql
-```
+**SQL scripts:** same SaleCo schema as `data/sample/SalesCO.db` (see above).
 
 ## Retail analytics (Module 7 — pivot / lambda notebook)
 

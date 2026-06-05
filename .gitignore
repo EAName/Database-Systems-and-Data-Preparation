@@ -2,6 +2,7 @@
 *.db
 *.sqlite
 *.sqlite3
+!data/sample/SalesCO.db
 
 # Raw datasets (large; download from sources in data/README.md)
 *.csv

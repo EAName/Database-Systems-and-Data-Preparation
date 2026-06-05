@@ -38,6 +38,7 @@ Northwestern University M.S. in Data Science (Data Engineering specialization): 
 | Utilities | `tabulate`, `sqlite3`, `collections.defaultdict` |
 | Deliverables (PDF) | ERD, normalization, BI SQL (RDB + warehouse), Cypher fraud-detection queries |
 | SQL / Cypher scripts | SaleCo SQLite schema, ClassicModels warehouse DDL/DML, sample queries, fraud-detection Cypher |
+| Dependencies | `requirements.txt` (pandas, SQLAlchemy, Elasticsearch 7.x client, folium, Jupyter) |
 
 ---
 
@@ -57,7 +58,10 @@ Database-Systems-and-Data-Preparation/
 │   └── graph/
 │       └── fraud-detection.cypher       # Neo4j fraud-detection graph seed
 ├── data/
-│   └── README.md                        # How to obtain CSVs/DBs (not committed)
+│   ├── sample/
+│   │   └── SalesCO.db                   # Committed SaleCo teaching database (~52 KB)
+│   └── README.md                        # How to obtain large CSVs/DBs (not committed)
+├── requirements.txt
 ├── SQL LA Traffic Data.ipynb
 ├── Data Prep & Cleaning.ipynb
 ├── Hierarchical Indexes, Pivot-tables, lambda, map.ipynb
@@ -77,17 +81,26 @@ Database-Systems-and-Data-Preparation/
 
 ---
 
-## 5. Quick start (SQL scripts)
-
-Rebuild the SaleCo SQLite teaching database (used in BI SQL coursework):
+## 5. Quick start
 
 ```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook
+```
+
+**SaleCo sample database** (BI SQL practice) is committed at `data/sample/SalesCO.db`. Query it directly or rebuild from scripts:
+
+```bash
+sqlite3 data/sample/SalesCO.db "SELECT name FROM sqlite_master WHERE type='table';"
+
+# Optional rebuild from SQL scripts:
 sqlite3 SalesCO.db < sql/rdb/build-saleco-schema.sql
 sqlite3 SalesCO.db < sql/rdb/load-saleco-data.sql
 sqlite3 SalesCO.db < sql/rdb/sample-queries.sql
 ```
 
-For LA traffic, Chicago inspections, `xyz.db`, and Elasticsearch replay, see [data/README.md](data/README.md). Raw CSVs and local `.db` files are gitignored because they are large (100 MB+).
+For LA traffic, Chicago inspections, `xyz.db`, and Elasticsearch replay, see [data/README.md](data/README.md). Large raw CSVs and local `.db` files remain gitignored (100 MB+).
 
 ---
 
