@@ -1,0 +1,19 @@
+# Local databases (rebuild from sql/ scripts or notebooks)
+*.db
+*.sqlite
+*.sqlite3
+
+# Raw datasets (large; download from sources in data/README.md)
+*.csv
+*.geojson
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Course binaries and exports not needed in portfolio
+*.exe
+*.html
