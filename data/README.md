@@ -1,6 +1,6 @@
 # Data setup
 
-This repository ships a small SaleCo SQLite sample for immediate SQL practice. Large raw files and course-specific databases are **not** committed; obtain or rebuild them using the sources below.
+Large raw files and most SQLite databases are **not** committed. One small teaching database is included for immediate SQL practice.
 
 ## Committed sample: SaleCo (`data/sample/SalesCO.db`, ~52 KB)
 
