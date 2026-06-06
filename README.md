@@ -6,7 +6,7 @@ Graduate coursework in database systems and analytics-oriented data preparation:
 
 ## 1. Title and Summary
 
-**Database Systems and Data Preparation (MSDS 420)**  
+**Database Systems and Data Preparation**  
 Northwestern University, M.S. in Data Science (Data Engineering specialization), Winter 2022.
 
 This repository documents coursework spanning the full data lifecycle from schema design and multi-paradigm storage through scripted load/query workflows and pandas-based preparation for downstream analysis. Work is organized across four Jupyter assignments, seven SQL/Cypher scripts, five written PDF deliverables, and one committed SQLite teaching database (`data/sample/SalesCO.db`).
@@ -153,5 +153,5 @@ For LA traffic, Chicago inspections, `xyz.db`, and Elasticsearch replay, see [da
 
 ---
 
-**Course:** Northwestern University, M.S. in Data Science (Data Engineering specialization), MSDS 420 — Database Systems and Data Preparation, Winter 2022  
+**Course context:** Northwestern University, M.S. in Data Science, Data Engineering specialization  
 **Repository:** https://github.com/EAName/Database-Systems-and-Data-Preparation
