@@ -18,10 +18,3 @@ Thumbs.db
 # Course binaries and exports not needed in portfolio
 *.exe
 *.html
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-venv/
-.env

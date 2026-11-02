@@ -1,4 +1,4 @@
-# MSDS 420: Database Systems (Winter 2022)
+# MSDS 420 — Database Systems and Data Preparation (Winter 2022)
 # Pinned for the four Jupyter notebooks in this repository.
 
 pandas>=1.3.0,<2.1
